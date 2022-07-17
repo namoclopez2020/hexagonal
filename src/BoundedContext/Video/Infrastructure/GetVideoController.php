@@ -21,5 +21,7 @@ final class GetVideoController
         $videoId = (int)$request->id;
         $getVideoUseCase = new GetVideoUseCase($this->repository);
         $video = $getVideoUseCase->__invoke($videoId);
+
+        return $video;
     }
 }

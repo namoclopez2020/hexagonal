@@ -16,17 +16,15 @@ class GetVideoController extends Controller
      */
     private $getVideoController;
 
-    // public function __construct(\Src\BoundedContext\Video\Infrastructure\GetVideoController $getVideoController)
-    // {
-    //     $this->getVideoController = $getVideoController;
-    // }
+    public function __construct(\Src\BoundedContext\Video\Infrastructure\GetVideoController $getVideoController)
+    {
+        $this->getVideoController = $getVideoController;
+    }
 
     public function __invoke(Request $request)
     {   
-        $a = new \Src\BoundedContext\Video\Infrastructure\GetVideoController;
-        return 'a';
-        // $video = $this->getVideoController->__invoke($request);
+        $video = $this->getVideoController->__invoke($request);
 
-        // return response()->json($video);
+        return response()->json($video);
     }
 }

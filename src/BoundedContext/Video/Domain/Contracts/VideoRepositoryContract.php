@@ -8,7 +8,7 @@ interface VideoRepositoryContract
 {
     public function find($id);
 
-    public function findByCriteria($userName, $userEmail);
+    // public function findByCriteria($userName, $userEmail);
 
     public function save($user): void;
 
